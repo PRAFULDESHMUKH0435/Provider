@@ -7,6 +7,7 @@ class MyFav extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    print("BUILD");
     final favprovider =Provider.of<FavouriteProvider>(context);
     List mylist = favprovider.list;
     return Scaffold(
@@ -19,6 +20,7 @@ class MyFav extends StatelessWidget {
                 itemBuilder: (context,index){
                    return Consumer<FavouriteProvider>(
                      builder: (context,child,value){
+                       print("ONLY THIS");
                        return ListTile(
                          title: Text("Item ${mylist[index]}"),
                          trailing: Icon(Icons.favorite,color: Colors.red,),
