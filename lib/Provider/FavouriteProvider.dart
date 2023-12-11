@@ -6,6 +6,7 @@ class FavouriteProvider with ChangeNotifier{
     list.sort();
     list.add(idx);
     print(list);
+    notifyListeners();
   }
 
   bool ispresent(int idx){
@@ -17,5 +18,6 @@ class FavouriteProvider with ChangeNotifier{
 
   void removeitem(int index){
     list.removeAt(index);
+    notifyListeners();
   }
 }

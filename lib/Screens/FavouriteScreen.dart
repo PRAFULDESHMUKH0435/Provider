@@ -14,7 +14,7 @@ class _FavouriteScreenState extends State<FavouriteScreen> {
   @override
   Widget build(BuildContext context) {
     print("BUILD");
-    final favprovider =Provider.of<FavouriteProvider>(context);
+    final favprovider =Provider.of<FavouriteProvider>(context,listen: false);
     return Scaffold(
       appBar: AppBar(title: Text('Provider'),backgroundColor: Colors.orange,actions: [
         IconButton(onPressed: (){
